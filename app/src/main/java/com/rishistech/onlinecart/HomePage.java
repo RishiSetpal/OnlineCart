@@ -79,10 +79,19 @@ public class HomePage extends AppCompatActivity {
 
 
     @Override
-    public boolean onSupportNavigateUp() {
+    public boolean onSupportNavigateUp(MenuItem item) {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
+        int id = item.getItemId();
+        if (id==R.id.nav_my_orders){
 
+        }else if (id==R.id.nav_my_cart){
+
+        }else if (id==R.id.nav_my_wishlist){
+
+        }else if (id==R.id.nav_my_account){
+
+        }
 
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
