@@ -3,15 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group>
         <item
             android:id="@+id/nav_my_orders"
             android:icon="@drawable/ic_baseline_my_orders_24"
             android:title="My Orders" />
-        <item
-            android:id="@+id/nav_my_rewards"
-            android:icon="@drawable/ic_baseline_card_giftcard_24"
-            android:title="My Rewards" />
         <item
             android:id="@+id/nav_my_cart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
@@ -25,4 +21,5 @@
             android:icon="@drawable/ic_baseline_account_circle_24"
             android:title="My Account" />
     </group>
+
 </menu>
