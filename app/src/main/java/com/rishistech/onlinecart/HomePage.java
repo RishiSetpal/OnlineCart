@@ -77,21 +77,26 @@ public class HomePage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//    @Override
+//    public boolean onNavigationItemSelected(MenuItem item) {
+//
+//        int id = item.getItemId();
+//        if (id==R.id.nav_my_orders){
+//            return true;
+//        }else if (id==R.id.nav_my_cart){
+//            return true;
+//        }else if (id==R.id.nav_my_wishlist){
+//            return true;
+//        }else if (id==R.id.nav_my_account){
+//            return true;
+//        }
+//        return super.onNavigationItemSelected(item);
+//    }
 
     @Override
-    public boolean onSupportNavigateUp(MenuItem item) {
+    public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
-        int id = item.getItemId();
-        if (id==R.id.nav_my_orders){
-
-        }else if (id==R.id.nav_my_cart){
-
-        }else if (id==R.id.nav_my_wishlist){
-
-        }else if (id==R.id.nav_my_account){
-
-        }
 
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
