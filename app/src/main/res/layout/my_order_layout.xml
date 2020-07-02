@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="Pixel 3 XL" />
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:layout_marginTop="10sp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:textSize="14sp"
+        android:text="Delivered on 27 June 2020"
+        android:drawableLeft="@drawable/done_foreground"
+        android:layout_below="@id/product_name"/>
+
+
+</RelativeLayout>
