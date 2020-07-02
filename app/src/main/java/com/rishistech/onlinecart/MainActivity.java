@@ -1,7 +1,6 @@
 package com.rishistech.onlinecart;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
