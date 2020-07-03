@@ -22,8 +22,7 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:layout_constraintBottom_toTopOf="@+id/main_fullname"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_account_box_24"
-        tools:ignore="VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_baseline_account_box_24" />
 
     <TextView
         android:id="@+id/main_fullname"
@@ -51,6 +50,5 @@
         android:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/main_profile_image"
         app:layout_constraintEnd_toEndOf="@+id/main_profile_image"
-        app:srcCompat="@drawable/ic_baseline_add_circle_24"
-        tools:ignore="VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_baseline_add_circle_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
