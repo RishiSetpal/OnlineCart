@@ -21,9 +21,10 @@
             <ImageView
                 android:layout_marginLeft="0dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/logo_online_cart" />
+                android:src="@drawable/logo_online_cart"
+                android:layout_marginStart="0dp" />
 
             <TextView
                 android:layout_width="wrap_content"
