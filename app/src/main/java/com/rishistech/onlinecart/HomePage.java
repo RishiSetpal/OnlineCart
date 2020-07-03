@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,7 +19,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class HomePage extends AppCompatActivity {
+public class HomePage extends AppCompatActivity
+    implements NavigationView.OnNavigationItemSelectedListener{
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -77,21 +79,24 @@ public class HomePage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    @Override
-//    public boolean onNavigationItemSelected(MenuItem item) {
-//
-//        int id = item.getItemId();
-//        if (id==R.id.nav_my_orders){
-//            return true;
-//        }else if (id==R.id.nav_my_cart){
-//            return true;
-//        }else if (id==R.id.nav_my_wishlist){
-//            return true;
-//        }else if (id==R.id.nav_my_account){
-//            return true;
-//        }
-//        return super.onNavigationItemSelected(item);
-//    }
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if (id==R.id.nav_my_orders){
+            return true;
+        }else if (id==R.id.nav_my_cart){
+            return true;
+        }else if (id==R.id.nav_my_wishlist){
+            return true;
+        }else if (id==R.id.nav_my_account){
+            return true;
+        }
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
