@@ -4,21 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:elevation="3dp"
-    android:background="@drawable/slider_background"
-    android:id="@+id/banner_container"
-    android:padding="8dp"
-    >
+    android:layout_height="wrap_content"
+    android:id="@+id/strip_ad_container"
+    android:elevation="3dp">
+
 
     <ImageView
-        android:id="@+id/banner_slide"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter"
+        android:id="@+id/strip_ad_image"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sale_banner" />
+        app:srcCompat="@drawable/sale_banner6"
+        android:scaleType="fitCenter"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
