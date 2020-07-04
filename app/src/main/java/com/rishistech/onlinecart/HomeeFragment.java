@@ -57,13 +57,15 @@ public class HomeeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_homee, container, false);
+
+
         categoryRecyclerView = view.findViewById(R.id.category_recyclerview);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         categoryRecyclerView.setLayoutManager(linearLayoutManager);
 
-        List<CategoryModel> categoryModelList = new ArrayList<CategoryModel>();
+        List<CategoryModel> categoryModelList = new ArrayList<>();
         categoryModelList.add(new CategoryModel("link","Home"));
         categoryModelList.add(new CategoryModel("link","Electronics"));
         categoryModelList.add(new CategoryModel("link","Appliances"));
@@ -82,7 +84,7 @@ public class HomeeFragment extends Fragment {
         //////////// Banner slider
         bannerSlideViewPager = view.findViewById(R.id.banner_slider_view_pager);
 
-        sliderModelList = new ArrayList<SliderModel>();
+        sliderModelList = new ArrayList<>();
 
         sliderModelList.add(new SliderModel(R.drawable.sale_banner5,"#03DAC5"));
         sliderModelList.add(new SliderModel(R.drawable.sale_banner6,"#03DAC5"));
@@ -149,7 +151,11 @@ public class HomeeFragment extends Fragment {
         //////////// Horizontal Product
         horizontalLayoutTitle = view.findViewById(R.id.horizontal_scroll_layout_title);
         horizontalViewAllBtn = view.findViewById(R.id.horizontal_scroll_view_all_button);
-        horizontalRecyclerView = view.findViewById(R.id.horizontal_scroll_layout_recyclerview);
+        horizontalRecyclerView = (RecyclerView) view.findViewById(R.id.horizontal_scroll_layout_recyclerview);
+
+        final LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
+        linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
+        horizontalRecyclerView.setLayoutManager(linearLayoutManager1);
 
         List<HorizontalProductScrollModal> horizontalProductScrollModalList = new ArrayList<>();
         horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile5,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
@@ -162,9 +168,6 @@ public class HomeeFragment extends Fragment {
         horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile4,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
 
         HorizontalProductScrollAdapter horizontalProductScrollAdapter = new HorizontalProductScrollAdapter(horizontalProductScrollModalList);
-        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
-        linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
-        horizontalRecyclerView.setLayoutManager(linearLayoutManager1);
 
         horizontalRecyclerView.setAdapter(horizontalProductScrollAdapter);
         horizontalProductScrollAdapter.notifyDataSetChanged();

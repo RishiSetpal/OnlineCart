@@ -14,8 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/colorAccent"
-        android:elevation="3dp"
-        tools:ignore="UnusedAttribute" />
+        android:elevation="3dp"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
