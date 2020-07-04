@@ -39,6 +39,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, DrawerLayout.DrawerListener {
 
@@ -190,7 +191,7 @@ public class HomePage extends AppCompatActivity
 
     @Override
     public void onDrawerOpened(@NonNull View drawerView) {
-
+        Toast.makeText(this, "Opened", Toast.LENGTH_SHORT).show();
     }
 
     @Override
