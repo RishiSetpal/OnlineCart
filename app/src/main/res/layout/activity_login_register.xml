@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LoginRegisterActivity">
+
+    <TextView
+        android:id="@+id/notAMem_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/light"
+        android:text="You are not a member?"
+        android:textColor="@color/purple"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959" />
+
+    <TextView
+        android:id="@+id/tpRegister_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/bold"
+        android:text="Register"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/notAMem_txt"
+        app:layout_constraintStart_toEndOf="@+id/notAMem_txt" />
+
+    <TextView
+        android:id="@+id/welcome_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bold"
+        android:text="Welcome to\nOnline Cart!"
+        android:textColor="@color/white"
+        android:textSize="41sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/niceToSeeYou_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/light"
+        android:text="Nice To See You again!"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/welcome_txt"
+        app:layout_constraintTop_toTopOf="@+id/welcome_txt" />
+
+    <Button
+        android:id="@+id/tpLogin_btn"
+        android:layout_width="163sp"
+        android:layout_height="53sp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/regular"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/niceToSeeYou_txt"
+        app:layout_constraintTop_toBottomOf="@+id/niceToSeeYou_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

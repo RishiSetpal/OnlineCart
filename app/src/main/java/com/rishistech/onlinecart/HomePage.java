@@ -1,18 +1,22 @@
 package com.rishistech.onlinecart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,6 +31,7 @@ public class HomePage extends AppCompatActivity
 
     private AppBarConfiguration mAppBarConfiguration;
     private FrameLayout frameLayout;
+    private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +94,13 @@ public class HomePage extends AppCompatActivity
         }else if (id==R.id.nav_my_cart){
         }else if (id==R.id.nav_my_wishlist){
         }else if (id==R.id.nav_my_account){
+            setFragment((new ProfileFragment()));
         }else if (id==R.id.nav_sign_out){
+            FirebaseAuth.getInstance().signOut();
+            Intent i = new Intent(HomePage.this, LoginRegisterActivity.class);
+            startActivity(i);
+            Toast.makeText(HomePage.this, "Sign Out successful", Toast.LENGTH_SHORT).show();
+            finish();
         }
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);

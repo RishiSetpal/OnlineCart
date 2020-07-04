@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_login_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".LoginActivity"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageButton
+            android:id="@+id/backRegister_btn"
+            android:layout_width="41dp"
+            android:layout_height="28dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/Hello_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.462"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/allReadyMem_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/light"
+            android:text="All ready a member?"
+            android:textColor="@color/purple"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.988" />
+
+        <EditText
+            android:id="@+id/emailRegister_txt"
+            android:layout_width="310sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textPersonName"
+            android:textColor="@color/purple"
+            android:textColorHint="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Hello_tv" />
+
+        <EditText
+            android:id="@+id/passwordRegister_txt"
+            android:layout_width="310sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/purple"
+            android:textColorHint="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailRegister_txt" />
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="162sp"
+            android:layout_height="51sp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/bold"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordRegister_txt" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/registerWithGoogle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toEndOf="@+id/register_btn"
+            app:layout_constraintTop_toBottomOf="@+id/passwordRegister_txt" />
+
+        <TextView
+            android:id="@+id/needHelp_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Need Help?"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.786"
+            app:layout_constraintStart_toEndOf="@+id/tpLogin_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.977" />
+
+        <TextView
+            android:id="@+id/tpLogin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Login"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toEndOf="@+id/allReadyMem_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.977" />
+
+        <TextView
+            android:id="@+id/Hello_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/purple"
+            android:textSize="51sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.227"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.16" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

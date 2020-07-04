@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_tp"
+    tools:context=".helpActivity">
+
+    <ImageButton
+        android:id="@+id/backRegister_btn2"
+        android:layout_width="41dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/helpCenter_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/bold"
+        android:text="Help Center!"
+        android:textColor="@color/purple"
+        android:textSize="51sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/helpCenter_tv2"
+        android:layout_width="303dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="228dp"
+        android:fontFamily="@font/light"
+        android:text="How to Register:\nFilling up all the details of the form and
+then, Registering by clicking Register.\n\nHow to Login:\nRegister you self first, if done then,
+fill the Credentials and then Login by
+clicking the Login button."
+        android:textColor="@color/purple"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
