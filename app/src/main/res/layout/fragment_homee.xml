@@ -17,17 +17,17 @@
         android:elevation="3dp"
         tools:ignore="UnusedAttribute" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">-->
 
-        <include layout="@layout/horizontal_scroll_item_layout" />
-    </LinearLayout>
+<!--        <include layout="@layout/horizontal_scroll_item_layout" />-->
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:id="@+id/linearLayout2"
