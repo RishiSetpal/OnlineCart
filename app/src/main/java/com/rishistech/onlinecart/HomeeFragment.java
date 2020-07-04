@@ -8,14 +8,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,11 @@ public class HomeeFragment extends Fragment {
     private ConstraintLayout stripAdContainer;
     //////////// Strip Add
 
-
+    //////////// Horizontal Product
+    private TextView horizontalLayoutTitle;
+    private Button horizontalViewAllBtn;
+    private RecyclerView horizontalRecyclerView;
+    //////////// Horizontal Product
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -140,6 +145,31 @@ public class HomeeFragment extends Fragment {
         stripAdImage.setImageResource(R.drawable.strip_ad);
         stripAdImage.setBackgroundColor(Color.parseColor("#000000"));
         //////////// Strip Add
+
+        //////////// Horizontal Product
+        horizontalLayoutTitle = view.findViewById(R.id.horizontal_scroll_layout_title);
+        horizontalViewAllBtn = view.findViewById(R.id.horizontal_scroll_view_all_button);
+        horizontalRecyclerView = view.findViewById(R.id.horizontal_scroll_layout_recyclerview);
+
+        List<HorizontalProductScrollModal> horizontalProductScrollModalList = new ArrayList<>();
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile5,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile4,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile3,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile2,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile2,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile3,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+        horizontalProductScrollModalList.add(new HorizontalProductScrollModal(R.drawable.mobile4,"IPhone 11Pro","Processor: A10","Rs.80,000/-"));
+
+        HorizontalProductScrollAdapter horizontalProductScrollAdapter = new HorizontalProductScrollAdapter(horizontalProductScrollModalList);
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
+        linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
+        horizontalRecyclerView.setLayoutManager(linearLayoutManager1);
+
+        horizontalRecyclerView.setAdapter(horizontalProductScrollAdapter);
+        horizontalProductScrollAdapter.notifyDataSetChanged();
+
+        //////////// Horizontal Product
 
 
         return view;
