@@ -7,4 +7,5 @@
     <color name="divider_grey">#8A8A89</color>
     <color name="bg_white">#FFFFFE</color>
     <color name="red">#E91E1E</color>
+    <color name="success">#098F21</color>
 </resources>
