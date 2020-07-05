@@ -12,8 +12,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyOrdersFragment addDetailsActivity=new MyOrdersFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.order_fragments,addDetailsActivity ).addToBackStack("tag").commit();
-    }
+        }
 }

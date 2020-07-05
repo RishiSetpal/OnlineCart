@@ -153,7 +153,9 @@ public class HomePage extends AppCompatActivity
 
         int id = item.getItemId();
         if (id == R.id.nav_my_mall){
+            setFragment((new HomeeFragment()));
         }else if (id==R.id.nav_my_orders){
+            setFragment((new MyOrdersFragment()));
         }else if (id==R.id.nav_my_cart){
         }else if (id==R.id.nav_my_wishlist){
         }else if (id==R.id.nav_my_account){
