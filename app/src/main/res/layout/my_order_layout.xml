@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4sp"
+    android:layout_marginBottom="4sp"
+    android:layout_marginRight="5sp"
+    android:layout_marginLeft="5sp"
+    android:elevation="3dp">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="Pixel 3 XL" />
+
+
+     <ImageView
+         android:id="@+id/delivery_indicator"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="10sp"
+         android:layout_marginTop="10sp"
+         android:src="@drawable/done_foreground"
+         android:layout_below="@+id/product_name" />
+    <TextView
+        android:id="@+id/delivery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/delivery_indicator"
+        android:text="Delivered on 27 June 2020"
+        android:layout_below="@id/product_name"/>
+    <TextView
+        android:id="@+id/product_rating"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:layout_below="@id/delivery_status"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:text="Your ratings" />
+
+
+    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_alignParentRight="true"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_below="@id/linear1"
+        android:background="#807E7E"/>
+        
+    <LinearLayout
+        android:id="@+id/rate_now_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_below="@+id/linear1"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:id="@+id/order_rating1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/star"/>
+        <ImageView
+            android:id="@+id/order_rating2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/star"/>
+        <ImageView
+            android:id="@+id/order_rating3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/star"/>
+        <ImageView
+            android:id="@+id/order_rating4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/star"/>
+        <ImageView
+            android:id="@+id/order_rating5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

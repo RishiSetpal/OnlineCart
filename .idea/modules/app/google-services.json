@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "627875658394",
+    "firebase_url": "https://online-cart-efa08.firebaseio.com",
+    "project_id": "online-cart-efa08",
+    "storage_bucket": "online-cart-efa08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627875658394:android:948c489a08ee1cd975fd23",
+        "android_client_info": {
+          "package_name": "com.rishistech.onlinecart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627875658394-ngmjq2j0cmtf2rara9289huo7qfesgmk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rishistech.onlinecart",
+            "certificate_hash": "3c43fddef1326ba1d389146acbeb45a5ea262738"
+          }
+        },
+        {
+          "client_id": "627875658394-m2o3r0ip00i4pqc45p9g8k45h3u9so5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFpGf6ddUvKlXM8W5UKL3ZT8G19gjH_ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627875658394-m2o3r0ip00i4pqc45p9g8k45h3u9so5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
