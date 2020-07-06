@@ -64,12 +64,18 @@ public class HomePage extends AppCompatActivity
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.addDrawerListener(this);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.setDrawerIndicatorEnabled(true);
+        toggle.setDrawerSlideAnimationEnabled(false);
+        toggle.syncState();
+
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
-
         frameLayout = findViewById(R.id.main_framelayout);
         setFragment((new HomeeFragment()));
 
@@ -193,7 +199,7 @@ public class HomePage extends AppCompatActivity
 
     @Override
     public void onDrawerOpened(@NonNull View drawerView) {
-        Toast.makeText(this, "Opened", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
